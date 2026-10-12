@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Elena Lucchese</title>
+<meta property="og:image" content="https://elenalucchese.github.io/foto.jpg">
 <meta name="description" content="Elena Lucchese, data economist for emergency services. Causal evidence on response times, dispatch, ambulance allocation and staffing.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,6 +46,10 @@ header.hero{padding-block:clamp(2.5rem,7vw,5rem) 2.5rem}
 .btn{display:inline-block;padding:.65rem 1.1rem;border-radius:4px;font-weight:600;text-decoration:none;border:1px solid var(--ink);color:var(--ink)}
 .btn.primary{background:var(--ink);color:var(--bg)}
 .btn:hover{border-color:var(--accent)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem 3rem;align-items:center}
+.hero-grid > div{min-width:0}
+.portrait{width:clamp(9rem,22vw,15rem);aspect-ratio:1;height:auto;max-width:100%;object-fit:cover;border-radius:6px;border:1px solid var(--line);display:block}
+@media (max-width:640px){.hero-grid{grid-template-columns:minmax(0,1fr)}.portrait{width:8rem;border-radius:50%;order:-1}}
 /* mission timeline */
 .mission{margin-top:2.75rem;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:1.25rem clamp(1rem,3vw,1.75rem)}
 .mission .label{margin-bottom:1rem}
@@ -136,6 +141,8 @@ footer{border-top:1px solid var(--line);padding-block:1.5rem;font-size:.85rem;co
 
 <header class="hero" id="top">
   <div class="wrap">
+    <div class="hero-grid">
+    <div>
     <span class="label">Data economist · PhD in Economics</span>
     <h1 style="margin-top:.6rem">I measure what saves <em>minutes</em> in emergency services.</h1>
     <p class="lede">I help organisations that run emergency services make better decisions on vehicles, staff and response times, using their own administrative data and rigorous impact evaluation. I have worked with data from dispatch centres and emergency departments in Lombardy and Liguria, together with public institutions, hospitals and researchers.</p>
@@ -144,6 +151,9 @@ footer{border-top:1px solid var(--line);padding-block:1.5rem;font-size:.85rem;co
       <a class="btn primary" href="#contact">Get in touch</a>
       <a class="btn" href="https://sites.google.com/view/elenalucchese/curriculum-vitae">Full CV</a>
       <a class="btn" href="https://www.linkedin.com/in/elena-lucchese-b26570b5/">LinkedIn</a>
+    </div>
+    </div>
+    <img class="portrait" src="foto.jpg" alt="Portrait of Elena Lucchese" width="480" height="480">
     </div>
 
     <div class="mission" aria-label="Where minutes are lost in an emergency mission">
