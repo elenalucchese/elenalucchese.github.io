@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elena Lucchese</title>
+<meta name="description" content="Elena Lucchese, data economist for emergency services. Causal evidence on response times, dispatch, ambulance allocation and staffing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single column, dispatch-log feel. Hero with a mission timeline, then evidence tiles, services, case files, skills. */
+:root{
+  --bg:#f3f5f7; --surface:#ffffff; --ink:#14202b; --muted:#566573; --line:#d5dce3;
+  --accent:#c2410c; --accent-soft:#fbe6da; --signal:#0f5c63;
+  --display:"Archivo","Arial Narrow",system-ui,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f161d; --surface:#172129; --ink:#e7edf2; --muted:#9aa9b6; --line:#2a3743;
+  --accent:#f0814a; --accent-soft:#3a2219; --signal:#5cc2c9; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f161d; --surface:#172129; --ink:#e7edf2; --muted:#9aa9b6; --line:#2a3743;
+  --accent:#f0814a; --accent-soft:#3a2219; --signal:#5cc2c9; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6}
+.wrap{max-width:68rem;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+a{color:var(--signal);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.1;margin:0}
+.label{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+nav.top{border-bottom:1px solid var(--line);background:var(--surface)}
+nav.top .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;align-items:center;justify-content:space-between;padding-block:.9rem}
+nav.top .name{font-family:var(--display);font-weight:700;font-stretch:85%;font-size:1.15rem;color:var(--ink);text-decoration:none}
+nav.top ul{list-style:none;display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;margin:0;padding:0;font-size:.95rem}
+nav.top ul a{color:var(--muted);text-decoration:none}
+nav.top ul a:hover{color:var(--ink)}
+header.hero{padding-block:clamp(2.5rem,7vw,5rem) 2.5rem}
+.hero h1{font-size:clamp(2.4rem,6.5vw,4.4rem);font-weight:800;font-stretch:78%;letter-spacing:-.01em;max-width:16ch}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .lede{font-size:1.2rem;max-width:58ch;margin:1.25rem 0 0;color:var(--ink)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;margin-top:1.25rem;font-family:var(--mono);font-size:.85rem;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.75rem}
+.btn{display:inline-block;padding:.65rem 1.1rem;border-radius:4px;font-weight:600;text-decoration:none;border:1px solid var(--ink);color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn:hover{border-color:var(--accent)}
+/* mission timeline */
+.mission{margin-top:2.75rem;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:1.25rem clamp(1rem,3vw,1.75rem)}
+.mission .label{margin-bottom:1rem}
+.track{display:grid;grid-template-columns:1.2fr 2.2fr 1.4fr 3.2fr;gap:4px}
+.seg{height:14px;background:var(--line);border-radius:2px}
+.seg.hot{background:var(--accent)}
+.steps{display:grid;grid-template-columns:1.2fr 2.2fr 1.4fr 3.2fr;gap:4px;margin-top:.6rem}
+.steps div{min-width:0;font-size:.82rem;line-height:1.35;color:var(--muted)}
+.steps b{display:block;font-family:var(--mono);font-weight:500;color:var(--ink);font-size:.8rem}
+.steps .hot b{color:var(--accent)}
+.mission p{margin:1rem 0 0;font-size:.92rem;color:var(--muted);max-width:70ch}
+section{padding-block:3rem;border-top:1px solid var(--line)}
+section > .wrap > h2{font-size:clamp(1.7rem,3.5vw,2.3rem);font-weight:700;font-stretch:85%;margin:.4rem 0 1.5rem}
+.intro{max-width:62ch;color:var(--muted);margin:-.75rem 0 1.75rem}
+/* evidence */
+.evidence{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem}
+.fig{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:1.25rem;display:flex;flex-direction:column;gap:.5rem;min-width:0}
+.fig .num{font-family:var(--display);font-weight:800;font-stretch:75%;font-size:2.8rem;line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
+.fig .num small{font-size:1.1rem;font-weight:600;color:var(--ink);margin-left:.25rem}
+.fig p{margin:0}
+.fig .src{margin-top:auto;padding-top:.5rem;font-family:var(--mono);font-size:.75rem;color:var(--muted)}
+/* services */
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.5rem 2.5rem;padding:0;margin:0;list-style:none}
+.services li{min-width:0;border-left:2px solid var(--line);padding-left:1rem}
+.services h3{font-size:1.15rem;font-weight:700;font-stretch:90%;margin-bottom:.3rem}
+.services p{margin:0;color:var(--muted)}
+/* cases */
+.case{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:1rem 2.5rem;padding-block:2rem;border-top:1px dashed var(--line)}
+.case:first-of-type{border-top:0;padding-top:0}
+.case aside .label{display:block;margin-bottom:.4rem}
+.case h3{font-size:1.4rem;font-weight:700;font-stretch:88%}
+.case aside .cite{font-size:.88rem;color:var(--muted);margin-top:.6rem}
+.case dl{margin:0;display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:.55rem 1rem}
+.case dt{font-family:var(--mono);font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
+.case dd{margin:0}
+.case dd.so{background:var(--accent-soft);border-radius:4px;padding:.5rem .75rem;margin-left:-.75rem}
+.case dt.so{color:var(--accent)}
+.other{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1rem;margin-top:1rem}
+.other div{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:1rem 1.25rem;min-width:0}
+.other h3{font-size:1.05rem;font-weight:700;font-stretch:92%;margin-bottom:.35rem}
+.other p{margin:0;font-size:.95rem;color:var(--muted)}
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.75rem 2.5rem}
+.skills > div{min-width:0}
+.skills h3{font-family:var(--mono);font-weight:500;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin:0;padding:0}
+.tags li{border:1px solid var(--line);background:var(--surface);border-radius:3px;padding:.15rem .55rem;font-size:.9rem}
+.tags li.strong{border-color:var(--signal);color:var(--signal);font-weight:500}
+/* experience */
+.xp{list-style:none;margin:0;padding:0;display:grid;gap:.9rem;max-width:52rem}
+.xp li{display:grid;grid-template-columns:8.5rem minmax(0,1fr);gap:1rem}
+.xp .yr{font-family:var(--mono);font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:.15rem}
+.xp b{font-weight:600}
+.xp span{color:var(--muted)}
+/* contact */
+.contact{display:flex;flex-wrap:wrap;gap:1rem 3rem;align-items:baseline}
+.contact .mail{font-family:var(--mono);font-size:1.1rem;user-select:all}
+footer{border-top:1px solid var(--line);padding-block:1.5rem;font-size:.85rem;color:var(--muted)}
+@media (max-width:640px){
+  .case{grid-template-columns:minmax(0,1fr)}
+  .case dl{grid-template-columns:minmax(0,1fr);gap:.15rem}
+  .case dd{margin-bottom:.6rem}
+  .case dd.so{margin-left:0}
+  .xp li{grid-template-columns:minmax(0,1fr);gap:0}
+  .track,.steps{grid-template-columns:1fr 1fr}
+  .track{display:none}
+  .steps{gap:.9rem 1rem}
+  .steps div{border-top:3px solid var(--line);padding-top:.4rem}
+  .steps div.hot{border-top-color:var(--accent)}
+}
+@media (prefers-reduced-motion:no-preference){.seg.hot{animation:pulse 2.4s ease-in-out infinite}@keyframes pulse{50%{opacity:.55}}}
+</style>
+</head>
+<body>
+
+<nav class="top" aria-label="Main">
+  <div class="wrap">
+    <a class="name" href="#top">Elena Lucchese</a>
+    <ul>
+      <li><a href="#evidence">Evidence</a></li>
+      <li><a href="#services">What I do</a></li>
+      <li><a href="#cases">Case studies</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="label">Data economist · PhD in Economics</span>
+    <h1 style="margin-top:.6rem">I measure what saves <em>minutes</em> in emergency services.</h1>
+    <p class="lede">I help organisations that run emergency services make better decisions on vehicles, staff and response times, using their own administrative data and rigorous impact evaluation. I have worked with data from dispatch centres and emergency departments in Lombardy and Liguria, together with public institutions, hospitals and researchers.</p>
+    <div class="meta"><span>Padova, Italy</span><span>Remote · hybrid · travel in Italy and Europe</span><span>IT · EN · ES</span></div>
+    <div class="cta">
+      <a class="btn primary" href="#contact">Get in touch</a>
+      <a class="btn" href="https://sites.google.com/view/elenalucchese/curriculum-vitae">Full CV</a>
+      <a class="btn" href="https://www.linkedin.com/in/elena-lucchese-b26570b5/">LinkedIn</a>
+    </div>
+
+    <div class="mission" aria-label="Where minutes are lost in an emergency mission">
+      <div class="label">Anatomy of a mission · where my research finds lost minutes</div>
+      <div class="track" aria-hidden="true"><div class="seg"></div><div class="seg"></div><div class="seg"></div><div class="seg hot"></div></div>
+      <div class="steps">
+        <div><b>00:00 Call</b>Call taken, triage protocol</div>
+        <div><b>Dispatch</b>Which vehicle, basic or advanced, from where</div>
+        <div><b>Departure</b>Crew rolls</div>
+        <div class="hot"><b>+5 min</b>Driving to an uncertain address</div>
+      </div>
+      <p>On urgent missions, not knowing exactly where the caller is costs about five minutes of travel. Each extra minute of average response time has a measurable cost in lives.</p>
+    </div>
+  </div>
+</header>
+
+<section id="evidence">
+  <div class="wrap">
+    <span class="label">Evidence</span>
+    <h2>What my work has shown</h2>
+    <div class="evidence">
+      <div class="fig">
+        <div class="num">+1<small>min</small></div>
+        <p>of average ambulance response time is linked to about <b>105 additional deaths per year</b> from cardiovascular events in one Italian region.</p>
+        <div class="src">Health Economics, 2024</div>
+      </div>
+      <div class="fig">
+        <div class="num">+30<small>%</small></div>
+        <p>travel time on urgent missions, about <b>5 minutes</b>, when the caller's location is uncertain.</p>
+        <div class="src">Italian Economics Journal, 2025</div>
+      </div>
+      <div class="fig">
+        <div class="num">35<small>% slower</small></div>
+        <p>Contract doctors in the emergency department work slower than employed doctors and spend 8% more on tests, with <b>no better outcomes</b>.</p>
+        <div class="src">With Battiston and Blanes i Vidal · under review</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <span class="label">What I do</span>
+    <h2>What I can do for your organisation</h2>
+    <ul class="services">
+      <li><h3>Performance analysis</h3><p>KPIs, response times, bottlenecks and demand patterns for dispatch centres and emergency services.</p></li>
+      <li><h3>Impact evaluation</h3><p>Did the new protocol, technology or reorganisation work? Credible before/after designs, not just descriptive comparisons.</p></li>
+      <li><h3>Resource and workforce planning</h3><p>Vehicle allocation, shift design, workload and fatigue, staffing models and contracts.</p></li>
+      <li><h3>Building data from public records</h3><p>Linking large administrative datasets: missions, ED visits, admissions, mortality, geography and weather.</p></li>
+      <li><h3>Evidence for decision-makers</h3><p>Clear reports and briefings for managers, regional authorities and policymakers.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section id="cases">
+  <div class="wrap">
+    <span class="label">Case studies</span>
+    <h2>Selected work, written for practitioners</h2>
+    <p class="intro">Each study uses a natural experiment or quasi-random variation to separate cause from coincidence. That is the difference between "response times are longer where outcomes are worse" and "this delay causes these deaths".</p>
+
+    <article class="case">
+      <aside><span class="label">Response times</span><h3>How much does one minute of ambulance delay cost?</h3><div class="cite"><i>Health Economics</i> 33(4), 2024 · <a href="https://doi.org/10.1002/hec.4791">paper</a></div></aside>
+      <dl>
+        <dt>Problem</dt><dd>Response time is a core KPI for emergency services. How much does it actually matter for patients?</dd>
+        <dt>Data</dt><dd>Emergency calls and ambulance response times for cardiovascular events in an Italian region, linked to patient outcomes and weather.</dd>
+        <dt>Method</dt><dd>Rain during the mission slows ambulances for reasons unrelated to the patient's condition. I use it as a natural experiment (instrumental variables).</dd>
+        <dt>Result</dt><dd>One extra minute of average response time corresponds to about 105 additional deaths per year in the region. The paper also estimates the economic value of these lives.</dd>
+        <dt class="so">So what</dt><dd class="so">Cutting even one minute through vehicle positioning, dispatch speed or routing has a large, measurable return.</dd>
+      </dl>
+    </article>
+
+    <article class="case">
+      <aside><span class="label">Dispatch · caller location</span><h3>The hidden cost of not knowing where the caller is</h3><div class="cite"><i>Italian Economics Journal</i>, 2025 · <a href="https://doi.org/10.1007/s40797-025-00352-3">paper</a></div></aside>
+      <dl>
+        <dt>Problem</dt><dd>Dispatchers often receive incomplete or imprecise addresses. How much time does this cost?</dd>
+        <dt>Data</dt><dd>Administrative records of the Liguria emergency medical system.</dd>
+        <dt>Method</dt><dd>Compare the outbound trip (destination uncertain) with the return trip (destination known), and private homes with public buildings, in a difference-in-differences design.</dd>
+        <dt>Result</dt><dd>Location uncertainty delays urgent missions by about 5 minutes, around 30% of travel time. The delay is about half as large on non-urgent missions.</dd>
+        <dt class="so">So what</dt><dd class="so">Better caller location (automatic handset location, address validation, dispatcher protocols) is one of the cheapest ways to save minutes.</dd>
+      </dl>
+    </article>
+
+    <article class="case">
+      <aside><span class="label">Workforce · staffing models</span><h3>Employees or contractors in the emergency department?</h3><div class="cite">With D. Battiston and J. Blanes i Vidal · under review</div></aside>
+      <dl>
+        <dt>Problem</dt><dd>Hospitals increasingly rely on contract doctors to fill shifts. Are they as productive as employees?</dd>
+        <dt>Data</dt><dd>Administrative records from the emergency department of a large public hospital.</dd>
+        <dt>Method</dt><dd>Patients are assigned to doctors almost at random, which allows a fair comparison.</dd>
+        <dt>Result</dt><dd>Contract doctors work about 35% slower and spend 8% more on tests and treatments, with no better outcomes. The gap comes from employment status, not from who is hired: employees do more unpaid overtime when it helps fellow employees.</dd>
+        <dt class="so">So what</dt><dd class="so">Staffing contracts shape team behaviour and productivity, not only cost.</dd>
+      </dl>
+    </article>
+
+    <div class="other">
+      <div><h3>Shift work and fatigue</h3><p>Performance drops at the end of shifts. Comparing cases by urgency shows that fatigue, not slacking off, is an important driver. With P. Roberti, working paper.</p></div>
+      <div><h3>Dispatch protocols: MPDS in Liguria</h3><p>Evaluation of how the 2011 introduction of the Medical Priority Dispatch System affected response delay and call duration. <i>Annals of Emergency Dispatch and Response</i>, 2016.</p></div>
+      <div><h3>Ongoing: emergency care in Lombardy</h3><p>Advanced vs. basic rescue units, ambulance destination choice, ED congestion and hospital productivity, on linked mission, ED, admission and mortality data. Modigliani Research Grant.</p></div>
+    </div>
+    <p style="margin-top:1.5rem">All publications and working papers: <a href="https://sites.google.com/view/elenalucchese/research">research page</a> · <a href="https://scholar.google.com/citations?user=vDhjWOgAAAAJ">Google Scholar</a></p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <span class="label">Skills</span>
+    <h2>Methods, data and tools</h2>
+    <div class="skills">
+      <div><h3>Methods</h3><ul class="tags"><li class="strong">Causal inference</li><li>Instrumental variables</li><li>Difference-in-differences</li><li>Regression discontinuity</li><li class="strong">Impact evaluation</li><li>Microsimulation</li><li>Spatial analysis</li></ul></div>
+      <div><h3>Data</h3><ul class="tags"><li class="strong">Large administrative datasets</li><li>Record linkage</li><li>Dispatch and mission data</li><li>ED and hospital records</li><li>Geographic and weather data</li></ul></div>
+      <div><h3>Tools</h3><ul class="tags"><li class="strong">Stata</li><li>ArcGIS</li><li>R</li><li>Python</li><li>LaTeX</li><li>Microsoft Office</li></ul></div>
+      <div><h3>Domain</h3><ul class="tags"><li class="strong">Emergency dispatch (118 / 112)</li><li>Ambulance allocation</li><li>Response times</li><li>ED operations</li><li>Shifts and staffing</li><li>Public policy</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <span class="label">Experience</span>
+    <h2>Experience and education</h2>
+    <ul class="xp">
+      <li><div class="yr">2022–now</div><div><b>Consultant</b></div></li>
+      <li><div class="yr">2019–2025</div><div><b>Research Fellow</b>, University of Milano-Bicocca <span>· Dept. of Economics, Management and Statistics</span></div></li>
+      <li><div class="yr">2018–2019</div><div><b>Research Fellow</b>, University of Rome Tor Vergata <span>· visiting at EIEF</span></div></li>
+      <li><div class="yr">2017</div><div><b>Visiting Researcher</b>, Stanford University <span>· Centre for Health Policy</span></div></li>
+      <li><div class="yr">2014–2018</div><div><b>PhD in Economics</b>, University of Bologna</div></li>
+      <li><div class="yr">2015</div><div><b>Consultant</b>, Italian Senate <span>· regulation of the sharing economy</span>; contributor to an <b>OECD</b> report on administrative datasets</div></li>
+      <li><div class="yr">2010–2013</div><div><b>BSc and MSc in Economics and Finance</b>, University of Padova <span>· 110/110</span></div></li>
+    </ul>
+    <p style="margin-top:1.5rem;color:var(--muted);max-width:62ch">Awards: Modigliani Research Grant (UniCredit Foundation), Martinotti Prize, Milano-Bicocca Starting Grant, Young Researcher Best Paper Award (Italian Health Economics Association), EIEF Grant. Talks at NBER, EEA-ESEM, Royal Economic Society, IAAE.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <span class="label">Contact</span>
+    <h2>Let's talk</h2>
+    <div class="contact">
+      <span class="mail">lucchese.elena@gmail.com</span>
+      <a href="https://www.linkedin.com/in/elena-lucchese-b26570b5/">LinkedIn</a>
+      <a href="https://sites.google.com/view/elenalucchese/curriculum-vitae">Full CV</a>
+      <a href="https://scholar.google.com/citations?user=vDhjWOgAAAAJ">Google Scholar</a>
+      <a href="https://sites.google.com/view/elenalucchese/home">Academic website</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">© 2026 Elena Lucchese · Padova, Italy</div></footer>
+</body>
+</html>
