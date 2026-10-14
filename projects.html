@@ -147,6 +147,8 @@ table.coef th{font-family:var(--mono);font-weight:500;font-size:.72rem;letter-sp
 table.coef td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--accent)}
 .big{display:flex;flex-wrap:wrap;gap:1rem}
 .big .fig{flex:1 1 12rem}
+.pair{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem;max-width:40rem}
+.pair img,.panel img{width:100%;height:auto;display:block;border-radius:4px;background:#fff}
 .soon{display:inline-block;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;border:1px dashed var(--muted);color:var(--muted);border-radius:3px;padding:.1rem .45rem;margin-top:.5rem}
 @media (max-width:640px){.proj{grid-template-columns:minmax(0,1fr)}.bars{grid-template-columns:minmax(0,1fr);gap:.2rem}.bars .k{margin-top:.5rem}}
 </style>
@@ -200,26 +202,38 @@ table.coef td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-
     <article class="proj" id="niguarda">
       <aside><span class="label">Workforce · staffing models</span><h3>Employees or contractors in the emergency department?</h3><div class="cite">Niguarda Hospital, Milan · with D. Battiston and J. Blanes i Vidal · under review</div></aside>
       <div class="body">
-        <p>Hospitals increasingly fill emergency department shifts with contract doctors. Patients are assigned to doctors almost at random, which allows a fair comparison of the two groups on the same kind of patients.</p>
-        <div class="panel">
-          <span class="label">Contract vs. employed doctors · employed = 100</span>
-          <div class="bars">
-            <div class="k">Time per patient</div><div class="bar"><i class="hot" style="width:100%"></i><span>135 · 35% slower</span></div>
-            <div class="k">Tests and treatments</div><div class="bar"><i class="hot" style="width:80%"></i><span>108 · +8% spending</span></div>
-            <div class="k">Patient outcomes</div><div class="bar"><i style="width:74%"></i><span>≈ 100 · no better</span></div>
-          </div>
-          <p class="note">Bars scaled to the largest value.</p>
+        <p>Hospitals increasingly fill emergency department shifts with contract doctors. Within each shift and treatment area, patients are assigned to doctors quasi-randomly, which allows a causal comparison of the two groups on the same kind of patients.</p>
+        <div class="big" style="margin-bottom:1rem">
+          <div class="fig"><div class="num">+24<small>% time</small></div><p>at least, to treat and discharge a patient</p></div>
+          <div class="fig"><div class="num">+7<small>% cost</small></div><p>at least, on tests and treatments</p></div>
+          <div class="fig"><div class="num">0<small>gain</small></div><p>no detectably better patient outcomes</p></div>
         </div>
-        <p class="so"><b>So what</b>The gap comes from employment status, not from who is hired: staffing contracts shape team behaviour and productivity, not only cost.</p>
+        <figure class="panel" style="margin:0">
+          <span class="label">Balance test · predicted vs. actual length of stay</span>
+          <img src="img/niguarda_predicted_vs_actual_los.png" alt="Binned scatter plot against contractor status. Predicted length of stay, based on patient characteristics, is flat (effect 0.004, SE 0.028). Actual length of stay rises steeply (effect 0.265, SE 0.036)." width="1600" height="1200" style="width:100%;height:auto;display:block;border-radius:4px;background:#fff">
+          <figcaption class="note">We predict each patient's length of stay from what is known at arrival (age, sex, triage, complaint, mode of arrival, referral). Contractors do not receive patients who should take longer (flat green line), yet their patients actually stay longer (red line). The gap is about how cases are managed, not which cases are assigned. All variables residualised on shift-by-area indicators.</figcaption>
+        </figure>
+        <p class="so"><b>So what</b>The gap comes from employment status, not from who is hired: employees put in extra effort for fellow employees, but not for contractors. Staffing contracts shape team behaviour and productivity, not only cost.</p>
       </div>
     </article>
 
     <article class="proj" id="shifts">
-      <aside><span class="label">Workforce · shifts</span><h3>Productivity over the course of a shift</h3><div class="cite">With P. Roberti · working paper</div></aside>
+      <aside><span class="label">Workforce · shifts</span><h3>Emergency department productivity across the day</h3><div class="cite">With D. Battiston and J. Blanes i Vidal · all emergency departments in Lombardy, 2019</div></aside>
       <div class="body">
-        <p>Performance drops towards the end of shifts. By comparing cases of different urgency, the study separates fatigue from slacking off, and shows that fatigue is an important driver.</p>
-        <span class="soon">Figures coming soon</span>
-        <p class="so"><b>So what</b>Shift length and handover timing are levers for both staff wellbeing and patient care.</p>
+        <p>Patients arrive at the emergency department following a smooth daily pattern. Doctors see them following the staff rota. Comparing the two, minute by minute across the whole region, shows where capacity is lost.</p>
+        <div class="pair">
+          <figure class="panel" style="margin:0">
+            <span class="label">a · Patients arriving, per minute</span>
+            <img src="img/ed_arrivals_by_minute.png" alt="Average number of patients arriving per minute across Lombardy emergency departments by time of day: low at night, peak of about 14 around 10:00, second peak around 14:30, then a slow decline." width="1200" height="842" loading="lazy">
+          </figure>
+          <figure class="panel" style="margin:0">
+            <span class="label">b · Patients seen by a doctor, per minute</span>
+            <img src="img/ed_first_visits_by_minute.png" alt="Average number of patients seen for the first time per minute by time of day: peak of about 12 around 10:00, with sharp drops at 14:00 and 20:00, at shift changes." width="1200" height="842" loading="lazy">
+          </figure>
+        </div>
+        <p class="note">Each dot is one minute of the day, averaged over 2019 across all Lombardy emergency departments. Axis labels in Italian: <i>pazienti in ingresso</i> = arrivals, <i>pazienti visitati</i> = patients seen.</p>
+        <p style="margin-top:1rem">Demand peaks at about 14 arrivals per minute around 10:00, while doctors never see more than about 12. Instead of staying high to clear the queue, capacity collapses at the <b>14:00 and 20:00 shift changes</b>. Overlapping shifts are not enough to keep the flow going.</p>
+        <p class="so"><b>So what</b>Staggering shift handovers and protecting capacity just after the morning peak would cut queues without hiring more doctors.</p>
       </div>
     </article>
 
