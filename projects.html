@@ -224,11 +224,11 @@ table.coef td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-
         <div class="pair">
           <figure class="panel" style="margin:0">
             <span class="label">a · Patients arriving, per minute</span>
-            <img src="img/ed_arrivals_by_minute.png" alt="Average number of patients arriving per minute across Lombardy emergency departments by time of day: low at night, peak of about 14 around 10:00, second peak around 14:30, then a slow decline." width="1200" height="842" loading="lazy">
+            <img src="img/ed_arrivals_by_minute.png" alt="Average number of patients arriving per minute across Lombardy emergency departments by time of day: low at night, peak of about 14 around 10:00, second peak around 14:30, then a slow decline." width="1200" height="842">
           </figure>
           <figure class="panel" style="margin:0">
             <span class="label">b · Patients seen by a doctor, per minute</span>
-            <img src="img/ed_first_visits_by_minute.png" alt="Average number of patients seen for the first time per minute by time of day: peak of about 12 around 10:00, with sharp drops at 14:00 and 20:00, at shift changes." width="1200" height="842" loading="lazy">
+            <img src="img/ed_first_visits_by_minute.png" alt="Average number of patients seen for the first time per minute by time of day: peak of about 12 around 10:00, with sharp drops at 14:00 and 20:00, at shift changes." width="1200" height="842">
           </figure>
         </div>
         <p class="note">Each dot is one minute of the day, averaged over 2019 across all Lombardy emergency departments. Axis labels in Italian: <i>pazienti in ingresso</i> = arrivals, <i>pazienti visitati</i> = patients seen.</p>
@@ -273,11 +273,19 @@ table.coef td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-
     </article>
 
     <article class="proj" id="stroke">
-      <aside><span class="label">Hospital networks · scenarios</span><h3>Where should stroke patients go?</h3><div class="cite">Lombardy</div></aside>
+      <aside><span class="label">Hospital networks · rules vs. practice</span><h3>Where do stroke patients go, and where should they go?</h3><div class="cite">Lombardy, 2024 · 12,047 stroke patients transported by the 118 service</div></aside>
       <div class="body">
-        <p>Scenario analysis of how the pressure on Lombardy hospitals changes when stroke patients are distributed differently, depending on the technology each hospital can provide.</p>
-        <span class="soon">Figures coming soon</span>
-        <p class="so"><b>So what</b>Equipment investments in one hospital change the workload of the whole network: plans should be assessed at system level.</p>
+        <p>Lombardy has a rule for where ambulances should take stroke patients: the nearest hospital of the right level within 45 minutes' drive. The region is now reclassifying hospitals and considering a new rule. Before changing the rule, I checked whether the current one is followed. For every patient I estimated the drive time to each of 37 hospitals and computed where the rule would have sent them.</p>
+        <div class="big" style="margin-bottom:1rem">
+          <div class="fig"><div class="num">32.7<small>%</small></div><p>of patients went to a different hospital from the one the current rule indicates (3,940 transports)</p></div>
+          <div class="fig"><div class="num">104<small>vs 447</small></div><p>Milan Città Studi: patients actually received vs. patients the rule would have sent</p></div>
+        </div>
+        <figure class="panel" style="margin:0;max-width:none">
+          <span class="label">Patients per hospital · actual (blue) vs. current rule (red)</span>
+          <img src="img/stroke_rule_vs_actual.png" alt="Bar chart of stroke patients per hospital in Lombardy in 2024. For many hospitals the actual number (Reale, blue) differs widely from the number the current rule would assign (Stimato, red): some receive far fewer, others far more." width="1600" height="960">
+          <figcaption class="note">Reale = actual destination; Stimato = destination under the rule in force. Drive times estimated on the road network and validated against observed ambulance trips.</figcaption>
+        </figure>
+        <p class="so"><b>So what</b>One patient in three does not go where the rule says. Is it worth writing new rules, or changing them, if we do not follow the ones we have? Before redesigning the network, it pays to understand why practice departs from the rule.</p>
       </div>
     </article>
 
