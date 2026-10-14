@@ -1,11 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
 <meta charset="utf-8">
+<link rel="alternate" hreflang="it" href="https://elenalucchese.github.io/projects.html">
+<link rel="alternate" hreflang="en" href="https://elenalucchese.github.io/en/projects.html">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Projects · Elena Lucchese</title>
+<title>Progetti · Elena Lucchese</title>
 <meta property="og:image" content="https://elenalucchese.github.io/foto.jpg">
-<meta name="description" content="Selected projects by Elena Lucchese on emergency services: staff wellbeing, staffing models, shifts, volunteers, caller location, response times and stroke networks.">
+<meta name="description" content="Alcuni progetti di Elena Lucchese sui sistemi di emergenza: personale, turni, volontari, localizzazione, tempi di risposta, rete ictus, centrali operative e benessere degli operatori.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -155,220 +157,220 @@ table.coef td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-
 </head>
 <body>
 
-<nav class="top" aria-label="Main">
+<nav class="top" aria-label="Principale">
   <div class="wrap">
     <a class="name" href="index.html">Elena Lucchese</a>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="projects.html" aria-current="page" style="color:var(--ink)">Projects</a></li>
-      <li><a href="CV_Elena_Lucchese_EN.pdf">CV</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="projects.html" aria-current="page" style="color:var(--ink)">Progetti</a></li>
+      <li><a href="CV_Elena_Lucchese_IT.pdf">CV</a></li>
+      <li><a href="index.html#contact">Contatti</a></li>
+      <li><a href="en/projects.html" lang="en" hreflang="en">EN</a></li>
     </ul>
   </div>
 </nav>
 
 <header class="hero" style="padding-bottom:1rem">
   <div class="wrap">
-    <span class="label">Projects</span>
-    <h1 style="margin-top:.6rem;font-size:clamp(2.2rem,5.5vw,3.6rem)">Seven projects, one question: <em>what makes emergency systems work?</em></h1>
-    <p class="lede">Staff wellbeing, staffing models, shifts, volunteers, dispatch, response times and hospital networks. For each project, one number, chart or table that captures what we learned.</p>
+    <span class="label">Progetti</span>
+    <h1 style="margin-top:.6rem;font-size:clamp(2.2rem,5.5vw,3.6rem)">Alcuni esempi di progetti <em>che ho sviluppato</em></h1>
+    <p class="lede">Una missione di emergenza è una catena: chiamata, invio del mezzo, viaggio, intervento sul posto, trasporto, consegna del paziente in ospedale, rientro in servizio. Gli obiettivi di performance guardano quasi solo ai primi anelli. I progetti qui sotto mostrano che le leve decisive stanno spesso più avanti nella catena, e nel modo in cui sono organizzati persone e regole. Per ogni progetto, un numero, un grafico o una tabella che riassume cosa abbiamo imparato.</p>
   </div>
 </header>
 
-<section>
+<section style="padding-top:1rem">
   <div class="wrap">
-
-    <article class="proj" id="burnout">
-      <aside><span class="label">Workforce · wellbeing</span><h3>Burnout among emergency workers in Liguria</h3><div class="cite">For the Liguria Region · ProQOL survey of doctors, nurses, rescuers and dispatch operators</div></aside>
-      <div class="body">
-        <p>Which emergency workers are most at risk of burnout and secondary traumatic stress? I analysed the Professional Quality of Life (ProQOL) survey of the regional emergency system, covering physicians, nurses, rescuers and drivers, and dispatch operators, both employees and volunteers.</p>
-        <div class="panel">
-          <span class="label">What predicts burnout and trauma · multiple regression</span>
-          <table class="coef">
-            <thead><tr><th>Factor</th><th>Outcome</th><th>Effect</th></tr></thead>
-            <tbody>
-              <tr><td>Doctors and nurses (vs. other roles)</td><td>Burnout</td><td class="n">+0.139***</td></tr>
-              <tr><td>Doctors and nurses (vs. other roles)</td><td>Overall distress index</td><td class="n">+0.284**</td></tr>
-              <tr><td>Years of service (log)</td><td>Burnout</td><td class="n">+0.071**</td></tr>
-              <tr><td>Women (vs. men)</td><td>Secondary traumatic stress</td><td class="n">+0.150***</td></tr>
-            </tbody>
-          </table>
-          <p class="note">Controls for gender, age, experience, contract type and role. Robust standard errors; ** p&lt;0.05, *** p&lt;0.01.</p>
-        </div>
-        <p class="so"><b>So what</b>Prevention should target clinical staff and experienced workers first, with dedicated support for secondary trauma.</p>
-      </div>
-    </article>
-
-    <article class="proj" id="niguarda">
-      <aside><span class="label">Workforce · staffing models</span><h3>Employees or contractors in the emergency department?</h3><div class="cite">Niguarda Hospital, Milan · with D. Battiston and J. Blanes i Vidal · under review</div></aside>
-      <div class="body">
-        <p>Hospitals increasingly fill emergency department shifts with contract doctors. Within each shift and treatment area, patients are assigned to doctors quasi-randomly, which allows a causal comparison of the two groups on the same kind of patients.</p>
-        <div class="big" style="margin-bottom:1rem">
-          <div class="fig"><div class="num">+24<small>% time</small></div><p>at least, to treat and discharge a patient</p></div>
-          <div class="fig"><div class="num">+7<small>% cost</small></div><p>at least, on tests and treatments</p></div>
-          <div class="fig"><div class="num">0<small>gain</small></div><p>no detectably better patient outcomes</p></div>
-        </div>
-        <figure class="panel" style="margin:0">
-          <span class="label">Balance test · predicted vs. actual length of stay</span>
-          <img src="img/niguarda_predicted_vs_actual_los.png" alt="Binned scatter plot against contractor status. Predicted length of stay, based on patient characteristics, is flat (effect 0.004, SE 0.028). Actual length of stay rises steeply (effect 0.265, SE 0.036)." width="1600" height="1200" style="width:100%;height:auto;display:block;border-radius:4px;background:#fff">
-          <figcaption class="note">We predict each patient's length of stay from what is known at arrival (age, sex, triage, complaint, mode of arrival, referral). Contractors do not receive patients who should take longer (flat green line), yet their patients actually stay longer (red line). The gap is about how cases are managed, not which cases are assigned. All variables residualised on shift-by-area indicators.</figcaption>
-        </figure>
-        <p class="so"><b>So what</b>The gap comes from employment status, not from who is hired: employees put in extra effort for fellow employees, but not for contractors. Staffing contracts shape team behaviour and productivity, not only cost.</p>
-      </div>
-    </article>
-
-    <article class="proj" id="shifts">
-      <aside><span class="label">Workforce · shifts</span><h3>Emergency department productivity across the day</h3><div class="cite">With D. Battiston and J. Blanes i Vidal · all emergency departments in Lombardy, 2019</div></aside>
-      <div class="body">
-        <p>Patients arrive at the emergency department following a smooth daily pattern. Doctors see them following the staff rota. Comparing the two, minute by minute across the whole region, shows where capacity is lost.</p>
-        <div class="pair">
-          <figure class="panel" style="margin:0">
-            <span class="label">a · Patients arriving, per minute</span>
-            <img src="img/ed_arrivals_by_minute.png" alt="Average number of patients arriving per minute across Lombardy emergency departments by time of day: low at night, peak of about 14 around 10:00, second peak around 14:30, then a slow decline." width="1200" height="842">
-          </figure>
-          <figure class="panel" style="margin:0">
-            <span class="label">b · Patients seen by a doctor, per minute</span>
-            <img src="img/ed_first_visits_by_minute.png" alt="Average number of patients seen for the first time per minute by time of day: peak of about 12 around 10:00, with sharp drops at 14:00 and 20:00, at shift changes." width="1200" height="842">
-          </figure>
-        </div>
-        <p class="note">Each dot is one minute of the day, averaged over 2019 across all Lombardy emergency departments. Axis labels in Italian: <i>pazienti in ingresso</i> = arrivals, <i>pazienti visitati</i> = patients seen.</p>
-        <p style="margin-top:1rem">Demand peaks at about 14 arrivals per minute around 10:00, while doctors never see more than about 12. Instead of staying high to clear the queue, capacity collapses at the <b>14:00 and 20:00 shift changes</b>. Overlapping shifts are not enough to keep the flow going.</p>
-        <p class="so"><b>So what</b>Staggering shift handovers and protecting capacity just after the morning peak would cut queues without hiring more doctors.</p>
-      </div>
-    </article>
-
-    <article class="proj" id="volunteers">
-      <aside><span class="label">System resilience</span><h3>Volunteers: the ambulance workforce that held during COVID</h3><div class="cite">With D. Battiston and J. Blanes i Vidal · Lombardy ambulance services, 2018–2022 · work in progress</div></aside>
-      <div class="body">
-        <p>In Lombardy, ambulances are run by non-profit organisations, and employees and volunteers do exactly the same job on board: driver, crew leader, rescuer. Following every worker month by month shows how each group responded to the pandemic shock.</p>
-        <div class="big" style="margin-bottom:1rem">
-          <div class="fig"><div class="num">≈ −30<small>%</small></div><p>employees: from about 30 to about 21 missions per month in spring 2020</p></div>
-          <div class="fig"><div class="num">≈ 6<small>steady</small></div><p>volunteers: missions per month unchanged, even slightly up at the start of the pandemic</p></div>
-        </div>
-        <figure class="panel" style="margin:0;max-width:none">
-          <span class="label">Average missions per worker per month · active workers</span>
-          <img src="img/volunteers_covid_incidents.png" alt="Line chart, January 2018 to December 2022. Employees (blue dashed) average about 28 to 31 missions per month, dropping to about 21 in spring 2020 and recovering by 2021. Volunteers (green) stay flat at about 5 to 7 missions per month throughout, with a small rise in early 2020." width="1600" height="1164">
-          <figcaption class="note">An observation is a worker-month; only workers with at least one mission in that month.</figcaption>
-        </figure>
-        <p class="so"><b>So what</b>Volunteers are a small but resilient share of capacity: when the system was under the greatest stress, their presence did not shrink. Emergency planning should count on them as a stabiliser, not only as extra hands.</p>
-      </div>
-    </article>
-
-    <article class="proj" id="location">
-      <aside><span class="label">Dispatch · caller location</span><h3>The hidden cost of not knowing where the caller is</h3><div class="cite"><i>Italian Economic Journal</i>, 2025 · <a href="https://doi.org/10.1007/s40797-025-00352-3">paper</a></div></aside>
-      <div class="body">
-        <p>Dispatchers often receive imprecise addresses. Comparing the outbound trip (destination uncertain) with the return trip (destination known), on Liguria emergency data, isolates the time lost looking for the patient.</p>
-        <div class="panel">
-          <span class="label">Extra driving time to reach a patient at home, by trip length (minutes)</span>
-          <img src="img/caller_location_by_distance.png" alt="Table: extra minutes of outward driving when the patient is in a dwelling, by total trip distance. 4.64 minutes under 5 km, 4.66 for 5 to 10 km, 4.75 for 10 to 15 km, 4.02 for 15 to 20 km, 3.60 for 20 to 25 km; all significant at 1%, with 24,000 to 91,000 missions per column." width="1980" height="1010" style="width:100%;height:auto;display:block;border-radius:4px;background:#fff">
-          <p style="margin:.6rem 0 0">Read the first row: whether the trip is under 5 km or over 20 km, finding a patient at home costs roughly <b>4 to 5 extra minutes</b>. It is a fixed cost of locating the patient, not a matter of distance; for urgent missions it is about 5 minutes, +30% on driving time.</p>
-        </div>
-        <p class="so"><b>So what</b>Better caller location (handset location, address validation, dispatcher protocols) is one of the cheapest ways to save minutes.</p>
-      </div>
-    </article>
-
-    <article class="proj" id="rain">
-      <aside><span class="label">Response times · outcomes</span><h3>What one minute of ambulance delay costs</h3><div class="cite"><i>Health Economics</i> 33(4), 2024 · <a href="https://doi.org/10.1002/hec.4791">paper</a></div></aside>
-      <div class="body">
-        <p>Rain slows ambulances for reasons unrelated to the patient's condition. Using rainfall as a natural experiment, I estimate the causal effect of response time on mortality from cardiac events.</p>
-        <div class="big">
-          <div class="fig"><div class="num">+1<small>min</small></div><p>of average response time</p></div>
-          <div class="fig"><div class="num">105<small>deaths / year</small></div><p>additional deaths in one Italian region</p></div>
-        </div>
-        <p class="so"><b>So what</b>Cutting even one minute through vehicle positioning, dispatch speed or routing has a large, measurable return.</p>
-      </div>
-    </article>
-
-    <article class="proj" id="stroke">
-      <aside><span class="label">Hospital networks · rules vs. practice</span><h3>Where do stroke patients go, and where should they go?</h3><div class="cite">Lombardy, 2024 · 12,047 stroke patients transported by the 118 service</div></aside>
-      <div class="body">
-        <p>Lombardy has a rule for where ambulances should take stroke patients: the nearest hospital of the right level within 45 minutes' drive. The region is now reclassifying hospitals and considering a new rule. Before changing the rule, I checked whether the current one is followed. For every patient I estimated the drive time to each of 37 hospitals and computed where the rule would have sent them.</p>
-        <div class="big" style="margin-bottom:1rem">
-          <div class="fig"><div class="num">32.7<small>%</small></div><p>of patients went to a different hospital from the one the current rule indicates (3,940 transports)</p></div>
-          <div class="fig"><div class="num">104<small>vs 447</small></div><p>Milan Città Studi: patients actually received vs. patients the rule would have sent</p></div>
-        </div>
-        <figure class="panel" style="margin:0;max-width:none">
-          <span class="label">Patients per hospital · actual (blue) vs. current rule (red)</span>
-          <img src="img/stroke_rule_vs_actual.png" alt="Bar chart of stroke patients per hospital in Lombardy in 2024. For many hospitals the actual number (Reale, blue) differs widely from the number the current rule would assign (Stimato, red): some receive far fewer, others far more." width="1600" height="960">
-          <figcaption class="note">Reale = actual destination; Stimato = destination under the rule in force. Drive times estimated on the road network and validated against observed ambulance trips.</figcaption>
-        </figure>
-        <p class="so"><b>So what</b>One patient in three does not go where the rule says. Is it worth writing new rules, or changing them, if we do not follow the ones we have? Before redesigning the network, it pays to understand why practice departs from the rule.</p>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<section id="system">
-  <div class="wrap">
-    <span class="label">The bigger picture</span>
-    <h2>How an ambulance system really works, and what managers should watch</h2>
-    <p class="intro" style="margin-top:0">An emergency mission is a chain: call, dispatch, drive, treatment on scene, transport, handover at the hospital, return to service. Performance targets look almost only at the first links. The projects above show that the decisive levers are often further down the chain, and in how people and rules are organised.</p>
-
-    <article class="proj" id="handover">
-      <aside><span class="label">Fleet capacity · hospital handover</span><h3>The response-time KPI stops at the patient's door</h3><div class="cite">With D. Battiston and J. Blanes i Vidal · Lombardy · about 7.3 million patients</div></aside>
-      <div class="body">
-        <p>Ambulance services are judged on response time. But once the ambulance reaches the emergency department, the crew must wait until the patient is taken over by hospital staff. Until then the vehicle is blocked and cannot answer the next call. In Lombardy this handover takes <b>21 minutes on average</b>, and it varies hugely from one hospital to another.</p>
-        <div class="big" style="margin-bottom:1rem">
-          <div class="fig"><div class="num">21<small>min</small></div><p>average handover time at the emergency department</p></div>
-          <div class="fig"><div class="num">9→38<small>min</small></div><p>from the fastest to the slowest hospital</p></div>
-        </div>
-        <figure class="panel" style="margin:0;max-width:none">
-          <span class="label">Average ambulance handover time by hospital (minutes)</span>
-          <img src="img/ambulance_handover_by_hospital.png" alt="Bar chart of Lombardy hospitals ordered by mean ambulance handover time, rising from about 9 minutes at the fastest hospitals to about 38 minutes at the slowest." width="1600" height="1164">
-          <figcaption class="note">Hospitals appearing at least 30,000 times in the data; one observation per patient.</figcaption>
-        </figure>
-        <p class="so"><b>So what</b>Every minute an ambulance waits at the hospital is a minute it is not available. Where handovers are slow, more vehicles and crews are needed to guarantee the same response times. Fleet sizing and hospital emergency department capacity must be planned together.</p>
-      </div>
-    </article>
-
-    <article class="proj" id="refused">
-      <aside><span class="label">Demand · matching services to needs</span><h3>One ambulance in nine does not take anyone to hospital</h3><div class="cite">With D. Battiston and J. Blanes i Vidal · Lombardy, about 9.5 million patients</div></aside>
-      <div class="body">
-        <p>In <b>11% of missions</b> the patient refuses transport to hospital. Was an ambulance the right response? The refusal rate depends heavily on the reason for the call: it is close to zero for time-critical emergencies, but very high for calls that are not really medical emergencies.</p>
-        <div class="big" style="margin-bottom:1rem">
-          <div class="fig"><div class="num">11<small>%</small></div><p>of ambulance missions end with the patient refusing transport</p></div>
-          <div class="fig"><div class="num">≈ 0<small>%</small></div><p>for time-critical conditions, amputations, childbirth</p></div>
-          <div class="fig"><div class="num">80–90<small>%</small></div><p>for help getting someone back to bed, people stuck in lifts, assistance calls</p></div>
-        </div>
-        <figure class="panel" style="margin:0;max-width:none">
-          <span class="label">Share of missions ending in refused transport, by reason for the call</span>
-          <img src="img/ambulance_refused_transport_by_complaint.png" alt="Bar chart of reasons for ambulance calls ordered by the share of missions where the patient refuses transport, rising from near zero for time-critical emergencies to about 0.9 for help getting a person back to bed, people stuck in lifts and assistance calls." width="1600" height="1164">
-          <figcaption class="note">Reasons for the call appearing at least 1,000 times; one observation per patient. Labels in Italian, e.g. <i>riallettamento</i> = getting a person back to bed, <i>ascensore</i> = stuck in a lift, <i>ausilio</i> = assistance.</figcaption>
-        </figure>
-        <p class="so"><b>So what</b>A large share of calls signal social and care needs rather than emergencies. Mapping who calls, for what and where shows which local services are missing, such as home assistance, lifting teams or community nursing, and frees ambulances for the patients who need them.</p>
-      </div>
-    </article>
-
-    <article class="proj" id="dispatch-load">
-      <aside><span class="label">Dispatch centres · workload</span><h3>What happens when a dispatch centre gets more calls?</h3><div class="cite">With D. Battiston and J. Blanes i Vidal · Lombardy 2023 territorial restructuring · difference-in-differences</div></aside>
-      <div class="body">
-        <p>Lombardy's emergency calls are handled by four regional dispatch centres. In 2023 part of the Milan area was reassigned to the Laghi and Pianura centres, while the Alpina centre was unaffected. This sudden shift in workload works as a natural experiment: with Alpina as a control group, it is possible to measure how call pressure affects operators and the service, from calls per operator to call handling time, errors and the time for the ambulance to reach the patient.</p>
-        <div class="big" style="margin-bottom:1rem">
-          <div class="fig"><div class="num">−13<small>%</small></div><p>incoming calls in Milan after the restructuring</p></div>
-          <div class="fig"><div class="num">+19<small>%</small></div><p>incoming calls in Laghi (+8% in Pianura)</p></div>
-          <div class="fig"><div class="num">−6<small>%</small></div><p>time from call to ambulance on scene in Milan; +2% in Pianura</p></div>
-        </div>
-        <figure class="panel" style="margin:0;max-width:none">
-          <span class="label">Share of calls received by each dispatch centre, by week</span>
-          <img src="img/dispatch_centre_call_shares.png" alt="Weekly share of emergency calls received by the four Lombardy dispatch centres, 2022 to 2024. In spring 2023 Milan's share drops from about 0.47 to about 0.37, Laghi's rises from about 0.17 to about 0.25 and Pianura's rises later; Alpina, the control group, stays around 0.2. The grey band marks the pre and post periods used in the analysis." width="1600" height="960">
-          <figcaption class="note">Grey band: the pre and post weeks used in the difference-in-differences analysis. Estimates control for the number of operators, week and centre fixed effects.</figcaption>
-        </figure>
-        <p class="so"><b>So what</b>How calls are split across dispatch centres is a management decision with measurable effects: lighter load means faster response, heavier load slows it. Redrawing territories should be planned together with staffing, and evaluated on the KPIs that matter to patients.</p>
-      </div>
-    </article>
-
-    <div class="other" style="margin-top:2rem">
-      <div><h3>Measure the whole mission</h3><p>Response time is necessary but not sufficient. Handover, return to service, destination choice and missions that end without transport decide how many ambulances are really available.</p></div>
-      <div><h3>Rules only work if they are applied</h3><p>One stroke patient in three goes to a different hospital from the one the rule indicates. Monitoring compliance comes before redesigning the network.</p></div>
-      <div><h3>Capacity follows the rota, demand does not</h3><p>Patients arrive smoothly over the day; capacity drops at every shift change. Staggered handovers protect the queue.</p></div>
-      <div><h3>Who works matters as much as how many</h3><p>Contract or employed doctors, volunteers or paid crews: employment models change productivity and resilience, not only cost.</p></div>
-      <div><h3>Small frictions, large costs</h3><p>An imprecise address costs about five minutes; one extra minute of response time costs lives. Cheap fixes upstream can have large returns.</p></div>
-      <div><h3>Look after the people</h3><p>Burnout and secondary trauma concentrate among clinical and experienced staff. Wellbeing is part of service performance.</p></div>
+    <span class="label">Il quadro generale</span>
+    <h2>Come funziona davvero un sistema di emergenza, e cosa dovrebbe guardare chi lo gestisce</h2>
+    <div class="other" style="margin-top:1rem">
+      <div><h3>Misurare tutta la missione</h3><p>Il tempo di risposta è necessario ma non basta. Consegna in ospedale, rientro in servizio, scelta della destinazione e missioni che finiscono senza trasporto decidono quante ambulanze sono davvero disponibili.</p></div>
+      <div><h3>Le regole funzionano solo se applicate</h3><p>Un paziente con ictus su tre va in un ospedale diverso da quello indicato dalla regola. Monitorare il rispetto delle regole viene prima di ridisegnare la rete.</p></div>
+      <div><h3>La capacità segue i turni, la domanda no</h3><p>I pazienti arrivano in modo regolare durante il giorno; la capacità crolla a ogni cambio turno. Cambi turno sfalsati proteggono la coda.</p></div>
+      <div><h3>Chi lavora conta quanto quanti lavorano</h3><p>Medici a contratto o dipendenti, volontari o equipaggi retribuiti: i modelli di impiego cambiano produttività e tenuta del sistema, non solo i costi.</p></div>
+      <div><h3>Piccoli attriti, grandi costi</h3><p>Un indirizzo impreciso costa circa cinque minuti; un minuto in più di tempo di risposta costa vite. Correttivi economici a monte possono avere grandi ritorni.</p></div>
+      <div><h3>Prendersi cura delle persone</h3><p>Burnout e trauma secondario si concentrano tra il personale sanitario e quello più esperto. Il benessere degli operatori fa parte della performance del servizio.</p></div>
     </div>
   </div>
 </section>
 
-<footer><div class="wrap">© 2026 Elena Lucchese · Padova, Italy · <a href="index.html">Home</a></div></footer>
+<section id="projects">
+  <div class="wrap">
+    <span class="label">Progetti</span>
+
+    <article class="proj" id="niguarda">
+      <aside><span class="label">Personale · modelli di impiego</span><h3>Dipendenti o medici a contratto in pronto soccorso?</h3><div class="cite">Ospedale Niguarda, Milano · con D. Battiston e J. Blanes i Vidal · in revisione</div></aside>
+      <div class="body">
+        <p>Gli ospedali coprono sempre più turni di pronto soccorso con medici a contratto. All'interno di ogni turno e area di trattamento, i pazienti sono assegnati ai medici in modo quasi casuale: questo permette un confronto causale tra i due gruppi su pazienti dello stesso tipo.</p>
+        <div class="big" style="margin-bottom:1rem">
+          <div class="fig"><div class="num">+24<small>% tempo</small></div><p>almeno, per trattare e dimettere un paziente</p></div>
+          <div class="fig"><div class="num">+7<small>% costi</small></div><p>almeno, in esami e trattamenti</p></div>
+          <div class="fig"><div class="num">0<small>benefici</small></div><p>nessun miglioramento rilevabile negli esiti dei pazienti</p></div>
+        </div>
+        <figure class="panel" style="margin:0">
+          <span class="label">Test di bilanciamento · durata della permanenza prevista e reale</span>
+          <img src="img/niguarda_predicted_vs_actual_los.png" alt="Grafico a dispersione per classi rispetto al contratto del medico. La durata prevista della permanenza, basata sulle caratteristiche del paziente, è piatta (effetto 0,004, ES 0,028). La durata reale cresce nettamente (effetto 0,265, ES 0,036)." width="1600" height="1200" style="width:100%;height:auto;display:block;border-radius:4px;background:#fff">
+          <figcaption class="note">Prevediamo la durata della permanenza di ogni paziente con ciò che si sa all'arrivo (età, sesso, triage, problema principale, modalità di arrivo, invio). Ai medici a contratto non arrivano pazienti che dovrebbero richiedere più tempo (linea verde piatta), eppure i loro pazienti restano di più (linea rossa). La differenza sta in come vengono gestiti i casi, non in quali casi vengono assegnati. Tutte le variabili sono depurate dagli effetti turno per area.</figcaption>
+        </figure>
+        <p class="so"><b>Quindi</b>La differenza dipende dal tipo di contratto, non da chi viene assunto: i dipendenti si impegnano di più per i colleghi dipendenti, ma non per quelli a contratto. I contratti del personale influenzano il comportamento del gruppo e la produttività, non solo i costi.</p>
+      </div>
+    </article>
+
+    <article class="proj" id="stroke">
+      <aside><span class="label">Reti ospedaliere · regole e pratica</span><h3>Dove vanno i pazienti con ictus, e dove dovrebbero andare?</h3><div class="cite">Lombardia, 2024 · 12.047 pazienti con ictus trasportati dal 118</div></aside>
+      <div class="body">
+        <p>In Lombardia esiste una regola su dove le ambulanze devono portare i pazienti con ictus: l'ospedale più vicino del livello giusto entro 45 minuti di viaggio. La regione sta riclassificando gli ospedali e valuta una nuova regola. Prima di cambiarla ho verificato se quella attuale viene rispettata. Per ogni paziente ho stimato il tempo di viaggio verso ciascuno dei 37 ospedali e calcolato dove la regola lo avrebbe mandato.</p>
+        <div class="big" style="margin-bottom:1rem">
+          <div class="fig"><div class="num">32,7<small>%</small></div><p>dei pazienti è andato in un ospedale diverso da quello indicato dalla regola attuale (3.940 trasporti)</p></div>
+          <div class="fig"><div class="num">104<small>contro 447</small></div><p>Milano Città Studi: pazienti ricevuti davvero e pazienti che la regola avrebbe mandato</p></div>
+        </div>
+        <figure class="panel" style="margin:0;max-width:none">
+          <span class="label">Pazienti per ospedale · reale (blu) e regola attuale (rosso)</span>
+          <img src="img/stroke_rule_vs_actual.png" alt="Grafico a barre dei pazienti con ictus per ospedale in Lombardia nel 2024. Per molti ospedali il numero reale (blu) è molto diverso da quello che assegnerebbe la regola attuale (Stimato, rosso): alcuni ne ricevono molti meno, altri molti di più." width="1600" height="960">
+          <figcaption class="note">Reale = destinazione effettiva; Stimato = destinazione secondo la regola in vigore. Tempi di viaggio stimati sulla rete stradale e validati sui viaggi osservati delle ambulanze.</figcaption>
+        </figure>
+        <p class="so"><b>Quindi</b>Un paziente su tre non va dove dice la regola. Ha senso scrivere nuove regole, o cambiarle, se non seguiamo quelle che abbiamo? Prima di ridisegnare la rete conviene capire perché la pratica si allontana dalla regola.</p>
+      </div>
+    </article>
+
+    <article class="proj" id="shifts">
+      <aside><span class="label">Personale · turni</span><h3>La produttività del pronto soccorso nell'arco della giornata</h3><div class="cite">Tutti i pronto soccorso della Lombardia, 2019</div></aside>
+      <div class="body">
+        <p>I pazienti arrivano in pronto soccorso seguendo un andamento giornaliero regolare. I medici li visitano seguendo i turni del personale. Confrontare le due curve, minuto per minuto in tutta la regione, mostra dove si perde capacità.</p>
+        <div class="pair">
+          <figure class="panel" style="margin:0">
+            <span class="label">a · Pazienti in ingresso, per minuto</span>
+            <img src="img/ed_arrivals_by_minute.png" alt="Numero medio di pazienti in ingresso per minuto nei pronto soccorso lombardi per ora del giorno: basso di notte, picco di circa 14 verso le 10:00, secondo picco verso le 14:30, poi un lento calo." width="1200" height="842">
+          </figure>
+          <figure class="panel" style="margin:0">
+            <span class="label">b · Pazienti visitati da un medico, per minuto</span>
+            <img src="img/ed_first_visits_by_minute.png" alt="Numero medio di pazienti visitati per la prima volta per minuto per ora del giorno: picco di circa 12 verso le 10:00, con cali netti alle 14:00 e alle 20:00, ai cambi turno." width="1200" height="842">
+          </figure>
+        </div>
+        <p class="note">Ogni punto è un minuto della giornata, in media sul 2019 e su tutti i pronto soccorso lombardi.</p>
+        <p style="margin-top:1rem">La domanda raggiunge un picco di circa 14 arrivi al minuto verso le 10:00, mentre i medici non visitano mai più di circa 12 pazienti. Invece di restare alta per smaltire la coda, la capacità crolla ai <b>cambi turno delle 14:00 e delle 20:00</b>. La sovrapposizione dei turni non basta a mantenere il flusso.</p>
+        <p class="so"><b>Quindi</b>Sfalsare i cambi turno e proteggere la capacità subito dopo il picco del mattino ridurrebbe le code senza assumere altri medici.</p>
+      </div>
+    </article>
+
+    <article class="proj" id="volunteers">
+      <aside><span class="label">Tenuta del sistema</span><h3>Volontari: la forza lavoro delle ambulanze che ha tenuto durante il COVID</h3><div class="cite">Servizi di ambulanza in Lombardia, 2018–2022 · lavoro in corso</div></aside>
+      <div class="body">
+        <p>In Lombardia le ambulanze sono gestite da associazioni non profit, e a bordo dipendenti e volontari fanno esattamente lo stesso lavoro: autista, capo equipaggio, soccorritore. Seguire ogni operatore mese per mese mostra come ciascun gruppo ha reagito allo shock della pandemia.</p>
+        <div class="big" style="margin-bottom:1rem">
+          <div class="fig"><div class="num">≈ −30<small>%</small></div><p>dipendenti: da circa 30 a circa 21 missioni al mese nella primavera 2020</p></div>
+          <div class="fig"><div class="num">≈ 6<small>stabile</small></div><p>volontari: missioni al mese invariate, anzi in leggero aumento all'inizio della pandemia</p></div>
+        </div>
+        <figure class="panel" style="margin:0;max-width:none">
+          <span class="label">Missioni medie per operatore al mese · operatori attivi</span>
+          <img src="img/volunteers_covid_incidents.png" alt="Grafico a linee, da gennaio 2018 a dicembre 2022. I dipendenti (blu tratteggiato) fanno in media circa 28-31 missioni al mese, scendono a circa 21 nella primavera 2020 e recuperano entro il 2021. I volontari (verde) restano stabili a circa 5-7 missioni al mese per tutto il periodo, con un piccolo aumento a inizio 2020." width="1600" height="1164">
+          <figcaption class="note">Un'osservazione è un operatore in un mese; solo operatori con almeno una missione in quel mese.</figcaption>
+        </figure>
+        <p class="so"><b>Quindi</b>I volontari sono una quota piccola ma solida della capacità: quando il sistema era sotto la pressione più forte, la loro presenza non è calata. La pianificazione dell'emergenza dovrebbe contare su di loro come elemento stabilizzatore, non solo come braccia in più.</p>
+      </div>
+    </article>
+
+    <article class="proj" id="location">
+      <aside><span class="label">Centrale operativa · localizzazione</span><h3>Il costo nascosto di non sapere dove si trova chi chiama</h3><div class="cite"><i>Italian Economic Journal</i>, 2025 · <a href="https://doi.org/10.1007/s40797-025-00352-3">articolo</a></div></aside>
+      <div class="body">
+        <p>Gli operatori di centrale ricevono spesso indirizzi imprecisi. Confrontare il viaggio di andata (destinazione incerta) con quello di ritorno (destinazione nota), sui dati dell'emergenza in Liguria, isola il tempo perso a cercare il paziente.</p>
+        <div class="panel">
+          <span class="label">Tempo di guida in più per raggiungere un paziente a casa, per lunghezza del viaggio (minuti)</span>
+          <img src="img/caller_location_by_distance.png" alt="Tabella: minuti di guida in più all'andata quando il paziente è in un'abitazione, per distanza totale del viaggio. 4,64 minuti sotto i 5 km, 4,66 tra 5 e 10 km, 4,75 tra 10 e 15 km, 4,02 tra 15 e 20 km, 3,60 tra 20 e 25 km; tutti significativi all'1%, con 24.000-91.000 missioni per colonna." width="1980" height="1010" style="width:100%;height:auto;display:block;border-radius:4px;background:#fff">
+          <p style="margin:.6rem 0 0">Guardate la prima riga: che il viaggio sia sotto i 5 km o sopra i 20, trovare un paziente a casa costa circa <b>4-5 minuti in più</b>. È un costo fisso di localizzazione del paziente, che non dipende dalla distanza; nelle missioni urgenti è di circa 5 minuti, +30% sul tempo di guida.</p>
+        </div>
+        <p class="so"><b>Quindi</b>Localizzare meglio chi chiama (posizione del telefono, verifica degli indirizzi, protocolli per gli operatori) è uno dei modi più economici per guadagnare minuti.</p>
+      </div>
+    </article>
+
+    <article class="proj" id="rain">
+      <aside><span class="label">Tempi di risposta · esiti</span><h3>Quanto costa un minuto di ritardo dell'ambulanza</h3><div class="cite"><i>Health Economics</i> 33(4), 2024 · <a href="https://doi.org/10.1002/hec.4791">articolo</a></div></aside>
+      <div class="body">
+        <p>La pioggia rallenta le ambulanze per ragioni che non dipendono dalle condizioni del paziente. Usando le precipitazioni come esperimento naturale, stimo l'effetto causale del tempo di risposta sulla mortalità per eventi cardiaci.</p>
+        <div class="big">
+          <div class="fig"><div class="num">+1<small>min</small></div><p>di tempo medio di risposta</p></div>
+          <div class="fig"><div class="num">105<small>morti / anno</small></div><p>morti in più in una regione italiana</p></div>
+        </div>
+        <p class="so"><b>Quindi</b>Ridurre anche solo di un minuto, con il posizionamento dei mezzi, la rapidità dell'invio o i percorsi, ha un ritorno grande e misurabile.</p>
+      </div>
+    </article>
+
+    <article class="proj" id="handover">
+      <aside><span class="label">Capacità della flotta · consegna in ospedale</span><h3>Il KPI del tempo di risposta si ferma alla porta del paziente</h3><div class="cite">Con D. Battiston e J. Blanes i Vidal · Lombardia · circa 7,3 milioni di pazienti</div></aside>
+      <div class="body">
+        <p>I servizi di ambulanza sono valutati sul tempo di risposta. Ma quando l'ambulanza arriva in pronto soccorso, l'equipaggio deve aspettare che il paziente venga preso in carico dal personale dell'ospedale. Fino ad allora il mezzo è bloccato e non può rispondere alla chiamata successiva. In Lombardia questa consegna dura <b>in media 21 minuti</b>, e cambia moltissimo da un ospedale all'altro.</p>
+        <div class="big" style="margin-bottom:1rem">
+          <div class="fig"><div class="num">21<small>min</small></div><p>tempo medio di consegna del paziente in pronto soccorso</p></div>
+          <div class="fig"><div class="num">9→38<small>min</small></div><p>dall'ospedale più rapido al più lento</p></div>
+        </div>
+        <figure class="panel" style="margin:0;max-width:none">
+          <span class="label">Tempo medio di consegna del paziente per ospedale (minuti)</span>
+          <img src="img/ambulance_handover_by_hospital.png" alt="Grafico a barre degli ospedali lombardi ordinati per tempo medio di consegna del paziente, da circa 9 minuti negli ospedali più rapidi a circa 38 minuti nei più lenti." width="1600" height="1164">
+          <figcaption class="note">Ospedali presenti almeno 30.000 volte nei dati; un'osservazione per paziente.</figcaption>
+        </figure>
+        <p class="so"><b>Quindi</b>Ogni minuto che un'ambulanza aspetta in ospedale è un minuto in cui non è disponibile. Dove le consegne sono lente servono più mezzi ed equipaggi per garantire gli stessi tempi di risposta. Il dimensionamento della flotta e la capacità dei pronto soccorso vanno pianificati insieme.</p>
+      </div>
+    </article>
+
+    <article class="proj" id="refused">
+      <aside><span class="label">Domanda · servizi adatti ai bisogni</span><h3>Un'ambulanza su nove non porta nessuno in ospedale</h3><div class="cite">Con D. Battiston e J. Blanes i Vidal · Lombardia, circa 9,5 milioni di pazienti</div></aside>
+      <div class="body">
+        <p>Nell'<b>11% delle missioni</b> il paziente rifiuta il trasporto in ospedale. L'ambulanza era la risposta giusta? La quota di rifiuti dipende molto dal motivo della chiamata: è quasi zero per le emergenze tempo-dipendenti, ma molto alta per chiamate che non sono vere emergenze sanitarie.</p>
+        <div class="big" style="margin-bottom:1rem">
+          <div class="fig"><div class="num">11<small>%</small></div><p>delle missioni finisce con il paziente che rifiuta il trasporto</p></div>
+          <div class="fig"><div class="num">≈ 0<small>%</small></div><p>per patologie tempo-dipendenti, amputazioni, parti</p></div>
+          <div class="fig"><div class="num">80–90<small>%</small></div><p>per riallettamenti, persone bloccate in ascensore, richieste di ausilio</p></div>
+        </div>
+        <figure class="panel" style="margin:0;max-width:none">
+          <span class="label">Quota di missioni che finiscono con il rifiuto del trasporto, per motivo della chiamata</span>
+          <img src="img/ambulance_refused_transport_by_complaint.png" alt="Grafico a barre dei motivi di chiamata ordinati per quota di missioni in cui il paziente rifiuta il trasporto, da quasi zero per le emergenze tempo-dipendenti a circa 0,9 per riallettamenti, persone bloccate in ascensore e richieste di ausilio." width="1600" height="1164">
+          <figcaption class="note">Motivi di chiamata presenti almeno 1.000 volte; un'osservazione per paziente.</figcaption>
+        </figure>
+        <p class="so"><b>Quindi</b>Una parte importante delle chiamate segnala bisogni sociali e di assistenza più che emergenze. Mappare chi chiama, per cosa e da dove mostra quali servizi mancano sul territorio, come l'assistenza domiciliare, squadre per il sollevamento o l'infermiere di comunità, e libera le ambulanze per i pazienti che ne hanno bisogno.</p>
+      </div>
+    </article>
+
+    <article class="proj" id="dispatch-load">
+      <aside><span class="label">Centrali operative · carico di lavoro</span><h3>Cosa succede quando una centrale riceve più chiamate?</h3><div class="cite">Con D. Battiston e J. Blanes i Vidal · riorganizzazione territoriale lombarda del 2023 · difference-in-differences</div></aside>
+      <div class="body">
+        <p>In Lombardia le chiamate di emergenza sono gestite da quattro centrali operative regionali. Nel 2023 parte dell'area di Milano è stata assegnata alle centrali Laghi e Pianura, mentre la centrale Alpina non è stata toccata. Questo spostamento improvviso del carico funziona come esperimento naturale: con Alpina come gruppo di controllo si può misurare come la pressione delle chiamate incide su operatori e servizio, dalle chiamate per operatore alla durata delle chiamate, agli errori e al tempo perché l'ambulanza raggiunga il paziente.</p>
+        <div class="big" style="margin-bottom:1rem">
+          <div class="fig"><div class="num">−13<small>%</small></div><p>chiamate in arrivo a Milano dopo la riorganizzazione</p></div>
+          <div class="fig"><div class="num">+19<small>%</small></div><p>chiamate in arrivo a Laghi (+8% a Pianura)</p></div>
+          <div class="fig"><div class="num">−6<small>%</small></div><p>tempo dalla chiamata all'arrivo dell'ambulanza a Milano; +2% a Pianura</p></div>
+        </div>
+        <figure class="panel" style="margin:0;max-width:none">
+          <span class="label">Quota di chiamate ricevute da ciascuna centrale, per settimana</span>
+          <img src="img/dispatch_centre_call_shares.png" alt="Quota settimanale di chiamate di emergenza ricevute dalle quattro centrali lombarde, 2022-2024. Nella primavera 2023 la quota di Milano scende da circa 0,47 a circa 0,37, quella di Laghi sale da circa 0,17 a circa 0,25 e quella di Pianura sale più tardi; Alpina, il gruppo di controllo, resta intorno a 0,2. La fascia grigia indica i periodi prima e dopo usati nell'analisi." width="1600" height="960">
+          <figcaption class="note">Fascia grigia: le settimane prima e dopo usate nell'analisi difference-in-differences. Le stime tengono conto del numero di operatori e di effetti fissi per settimana e centrale.</figcaption>
+        </figure>
+        <p class="so"><b>Quindi</b>Come si distribuiscono le chiamate tra le centrali è una scelta gestionale con effetti misurabili: meno carico significa risposte più rapide, più carico le rallenta. Ridisegnare i territori va pianificato insieme al personale e valutato sui KPI che contano per i pazienti.</p>
+      </div>
+    </article>
+
+    <article class="proj" id="burnout">
+      <aside><span class="label">Personale · benessere</span><h3>Il burnout tra gli operatori dell'emergenza in Liguria</h3><div class="cite">Per Regione Liguria · questionario ProQOL a medici, infermieri, soccorritori e operatori di centrale</div></aside>
+      <div class="body">
+        <p>Quali operatori dell'emergenza sono più a rischio di burnout e di stress traumatico secondario? Ho analizzato il questionario Professional Quality of Life (ProQOL) del sistema regionale di emergenza, rivolto a medici, infermieri, soccorritori e autisti e operatori di centrale, sia dipendenti sia volontari.</p>
+        <div class="panel">
+          <span class="label">Cosa predice burnout e trauma · regressione multipla</span>
+          <table class="coef">
+            <thead><tr><th>Fattore</th><th>Esito</th><th>Effetto</th></tr></thead>
+            <tbody>
+              <tr><td>Medici e infermieri (rispetto agli altri ruoli)</td><td>Burnout</td><td class="n">+0,139***</td></tr>
+              <tr><td>Medici e infermieri (rispetto agli altri ruoli)</td><td>Indice complessivo di disagio</td><td class="n">+0,284**</td></tr>
+              <tr><td>Anni di servizio (log)</td><td>Burnout</td><td class="n">+0,071**</td></tr>
+              <tr><td>Donne (rispetto agli uomini)</td><td>Stress traumatico secondario</td><td class="n">+0,150***</td></tr>
+            </tbody>
+          </table>
+          <p class="note">Controlli per genere, età, esperienza, tipo di contratto e ruolo. Errori standard robusti; ** p&lt;0,05, *** p&lt;0,01.</p>
+        </div>
+        <p class="so"><b>Quindi</b>La prevenzione dovrebbe partire dal personale sanitario e dagli operatori più esperti, con un sostegno dedicato al trauma secondario.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<footer><div class="wrap">© 2026 Elena Lucchese · Padova · <a href="index.html">Home</a></div></footer>
 </body>
 </html>
