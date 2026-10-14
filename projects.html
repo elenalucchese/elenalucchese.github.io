@@ -196,24 +196,6 @@ table.coef td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-
   <div class="wrap">
     <span class="label">Progetti</span>
 
-    <article class="proj" id="niguarda">
-      <aside><span class="label">Personale · modelli di impiego</span><h3>Dipendenti o medici a contratto in pronto soccorso?</h3><div class="cite">Ospedale Niguarda, Milano · con D. Battiston e J. Blanes i Vidal · in revisione</div></aside>
-      <div class="body">
-        <p>Gli ospedali coprono sempre più turni di pronto soccorso con medici a contratto. All'interno di ogni turno e area di trattamento, i pazienti sono assegnati ai medici in modo quasi casuale: questo permette un confronto causale tra i due gruppi su pazienti dello stesso tipo.</p>
-        <div class="big" style="margin-bottom:1rem">
-          <div class="fig"><div class="num">+24<small>% tempo</small></div><p>almeno, per trattare e dimettere un paziente</p></div>
-          <div class="fig"><div class="num">+7<small>% costi</small></div><p>almeno, in esami e trattamenti</p></div>
-          <div class="fig"><div class="num">0<small>benefici</small></div><p>nessun miglioramento rilevabile negli esiti dei pazienti</p></div>
-        </div>
-        <figure class="panel" style="margin:0">
-          <span class="label">Test di bilanciamento · durata della permanenza prevista e reale</span>
-          <img src="img/niguarda_predicted_vs_actual_los.png" alt="Grafico a dispersione per classi rispetto al contratto del medico. La durata prevista della permanenza, basata sulle caratteristiche del paziente, è piatta (effetto 0,004, ES 0,028). La durata reale cresce nettamente (effetto 0,265, ES 0,036)." width="1600" height="1200" style="width:100%;height:auto;display:block;border-radius:4px;background:#fff">
-          <figcaption class="note">Prevediamo la durata della permanenza di ogni paziente con ciò che si sa all'arrivo (età, sesso, triage, problema principale, modalità di arrivo, invio). Ai medici a contratto non arrivano pazienti che dovrebbero richiedere più tempo (linea verde piatta), eppure i loro pazienti restano di più (linea rossa). La differenza sta in come vengono gestiti i casi, non in quali casi vengono assegnati. Tutte le variabili sono depurate dagli effetti turno per area.</figcaption>
-        </figure>
-        <p class="so"><b>Quindi</b>La differenza dipende dal tipo di contratto, non da chi viene assunto: i dipendenti si impegnano di più per i colleghi dipendenti, ma non per quelli a contratto. I contratti del personale influenzano il comportamento del gruppo e la produttività, non solo i costi.</p>
-      </div>
-    </article>
-
     <article class="proj" id="stroke">
       <aside><span class="label">Reti ospedaliere · regole e pratica</span><h3>Dove vanno i pazienti con ictus, e dove dovrebbero andare?</h3><div class="cite">Lombardia, 2024 · 12.047 pazienti con ictus trasportati dal 118</div></aside>
       <div class="body">
@@ -248,6 +230,24 @@ table.coef td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-
         <p class="note">Ogni punto è un minuto della giornata, in media sul 2019 e su tutti i pronto soccorso lombardi.</p>
         <p style="margin-top:1rem">La domanda raggiunge un picco di circa 14 arrivi al minuto verso le 10:00, mentre i medici non visitano mai più di circa 12 pazienti. Invece di restare alta per smaltire la coda, la capacità crolla ai <b>cambi turno delle 14:00 e delle 20:00</b>. La sovrapposizione dei turni non basta a mantenere il flusso.</p>
         <p class="so"><b>Quindi</b>Sfalsare i cambi turno e proteggere la capacità subito dopo il picco del mattino ridurrebbe le code senza assumere altri medici.</p>
+      </div>
+    </article>
+
+    <article class="proj" id="niguarda">
+      <aside><span class="label">Personale · modelli di impiego</span><h3>Dipendenti o medici a contratto in pronto soccorso?</h3><div class="cite">Ospedale Niguarda, Milano · con D. Battiston e J. Blanes i Vidal · in revisione</div></aside>
+      <div class="body">
+        <p>Gli ospedali coprono sempre più turni di pronto soccorso con medici a contratto. All'interno di ogni turno e area di trattamento, i pazienti sono assegnati ai medici in modo quasi casuale: questo permette un confronto causale tra i due gruppi su pazienti dello stesso tipo.</p>
+        <div class="big" style="margin-bottom:1rem">
+          <div class="fig"><div class="num">+24<small>% tempo</small></div><p>almeno, per trattare e dimettere un paziente</p></div>
+          <div class="fig"><div class="num">+7<small>% costi</small></div><p>almeno, in esami e trattamenti</p></div>
+          <div class="fig"><div class="num">0<small>benefici</small></div><p>nessun miglioramento rilevabile negli esiti dei pazienti</p></div>
+        </div>
+        <figure class="panel" style="margin:0">
+          <span class="label">Test di bilanciamento · durata della permanenza prevista e reale</span>
+          <img src="img/niguarda_predicted_vs_actual_los.png" alt="Grafico a dispersione per classi rispetto al contratto del medico. La durata prevista della permanenza, basata sulle caratteristiche del paziente, è piatta (effetto 0,004, ES 0,028). La durata reale cresce nettamente (effetto 0,265, ES 0,036)." width="1600" height="1200" style="width:100%;height:auto;display:block;border-radius:4px;background:#fff">
+          <figcaption class="note">Prevediamo la durata della permanenza di ogni paziente con ciò che si sa all'arrivo (età, sesso, triage, problema principale, modalità di arrivo, invio). Ai medici a contratto non arrivano pazienti che dovrebbero richiedere più tempo (linea verde piatta), eppure i loro pazienti restano di più (linea rossa). La differenza sta in come vengono gestiti i casi, non in quali casi vengono assegnati. Tutte le variabili sono depurate dagli effetti turno per area.</figcaption>
+        </figure>
+        <p class="so"><b>Quindi</b>La differenza dipende dal tipo di contratto, non da chi viene assunto: i dipendenti si impegnano di più per i colleghi dipendenti, ma non per quelli a contratto. I contratti del personale influenzano il comportamento del gruppo e la produttività, non solo i costi.</p>
       </div>
     </article>
 

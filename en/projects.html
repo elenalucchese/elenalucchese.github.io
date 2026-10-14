@@ -196,24 +196,6 @@ table.coef td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-
   <div class="wrap">
     <span class="label">Projects</span>
 
-    <article class="proj" id="niguarda">
-      <aside><span class="label">Workforce · staffing models</span><h3>Employees or contractors in the emergency department?</h3><div class="cite">Niguarda Hospital, Milan · with D. Battiston and J. Blanes i Vidal · under review</div></aside>
-      <div class="body">
-        <p>Hospitals increasingly fill emergency department shifts with contract doctors. Within each shift and treatment area, patients are assigned to doctors quasi-randomly, which allows a causal comparison of the two groups on the same kind of patients.</p>
-        <div class="big" style="margin-bottom:1rem">
-          <div class="fig"><div class="num">+24<small>% time</small></div><p>at least, to treat and discharge a patient</p></div>
-          <div class="fig"><div class="num">+7<small>% cost</small></div><p>at least, on tests and treatments</p></div>
-          <div class="fig"><div class="num">0<small>gain</small></div><p>no detectably better patient outcomes</p></div>
-        </div>
-        <figure class="panel" style="margin:0">
-          <span class="label">Balance test · predicted vs. actual length of stay</span>
-          <img src="../img/niguarda_predicted_vs_actual_los.png" alt="Binned scatter plot against contractor status. Predicted length of stay, based on patient characteristics, is flat (effect 0.004, SE 0.028). Actual length of stay rises steeply (effect 0.265, SE 0.036)." width="1600" height="1200" style="width:100%;height:auto;display:block;border-radius:4px;background:#fff">
-          <figcaption class="note">We predict each patient's length of stay from what is known at arrival (age, sex, triage, complaint, mode of arrival, referral). Contractors do not receive patients who should take longer (flat green line), yet their patients actually stay longer (red line). The gap is about how cases are managed, not which cases are assigned. All variables residualised on shift-by-area indicators.</figcaption>
-        </figure>
-        <p class="so"><b>So what</b>The gap comes from employment status, not from who is hired: employees put in extra effort for fellow employees, but not for contractors. Staffing contracts shape team behaviour and productivity, not only cost.</p>
-      </div>
-    </article>
-
     <article class="proj" id="stroke">
       <aside><span class="label">Hospital networks · rules vs. practice</span><h3>Where do stroke patients go, and where should they go?</h3><div class="cite">Lombardy, 2024 · 12,047 stroke patients transported by the 118 service</div></aside>
       <div class="body">
@@ -248,6 +230,24 @@ table.coef td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-
         <p class="note">Each dot is one minute of the day, averaged over 2019 across all Lombardy emergency departments. Axis labels in Italian: <i>pazienti in ingresso</i> = arrivals, <i>pazienti visitati</i> = patients seen.</p>
         <p style="margin-top:1rem">Demand peaks at about 14 arrivals per minute around 10:00, while doctors never see more than about 12. Instead of staying high to clear the queue, capacity collapses at the <b>14:00 and 20:00 shift changes</b>. Overlapping shifts are not enough to keep the flow going.</p>
         <p class="so"><b>So what</b>Staggering shift handovers and protecting capacity just after the morning peak would cut queues without hiring more doctors.</p>
+      </div>
+    </article>
+
+    <article class="proj" id="niguarda">
+      <aside><span class="label">Workforce · staffing models</span><h3>Employees or contractors in the emergency department?</h3><div class="cite">Niguarda Hospital, Milan · with D. Battiston and J. Blanes i Vidal · under review</div></aside>
+      <div class="body">
+        <p>Hospitals increasingly fill emergency department shifts with contract doctors. Within each shift and treatment area, patients are assigned to doctors quasi-randomly, which allows a causal comparison of the two groups on the same kind of patients.</p>
+        <div class="big" style="margin-bottom:1rem">
+          <div class="fig"><div class="num">+24<small>% time</small></div><p>at least, to treat and discharge a patient</p></div>
+          <div class="fig"><div class="num">+7<small>% cost</small></div><p>at least, on tests and treatments</p></div>
+          <div class="fig"><div class="num">0<small>gain</small></div><p>no detectably better patient outcomes</p></div>
+        </div>
+        <figure class="panel" style="margin:0">
+          <span class="label">Balance test · predicted vs. actual length of stay</span>
+          <img src="../img/niguarda_predicted_vs_actual_los.png" alt="Binned scatter plot against contractor status. Predicted length of stay, based on patient characteristics, is flat (effect 0.004, SE 0.028). Actual length of stay rises steeply (effect 0.265, SE 0.036)." width="1600" height="1200" style="width:100%;height:auto;display:block;border-radius:4px;background:#fff">
+          <figcaption class="note">We predict each patient's length of stay from what is known at arrival (age, sex, triage, complaint, mode of arrival, referral). Contractors do not receive patients who should take longer (flat green line), yet their patients actually stay longer (red line). The gap is about how cases are managed, not which cases are assigned. All variables residualised on shift-by-area indicators.</figcaption>
+        </figure>
+        <p class="so"><b>So what</b>The gap comes from employment status, not from who is hired: employees put in extra effort for fellow employees, but not for contractors. Staffing contracts shape team behaviour and productivity, not only cost.</p>
       </div>
     </article>
 
