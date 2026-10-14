@@ -196,6 +196,19 @@ table.coef td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-
   <div class="wrap">
     <span class="label">Projects</span>
 
+    <article class="proj" id="location">
+      <aside><span class="label">Dispatch · caller location</span><h3>The hidden cost of not knowing where the caller is</h3><div class="cite"><i>Italian Economic Journal</i>, 2025 · <a href="https://doi.org/10.1007/s40797-025-00352-3">paper</a></div></aside>
+      <div class="body">
+        <p>Dispatchers often receive imprecise addresses. Comparing the outbound trip (destination uncertain) with the return trip (destination known), on Liguria emergency data, isolates the time lost looking for the patient.</p>
+        <div class="panel">
+          <span class="label">Extra driving time to reach a patient at home, by trip length (minutes)</span>
+          <img src="../img/caller_location_by_distance.png" alt="Table: extra minutes of outward driving when the patient is in a dwelling, by total trip distance. 4.64 minutes under 5 km, 4.66 for 5 to 10 km, 4.75 for 10 to 15 km, 4.02 for 15 to 20 km, 3.60 for 20 to 25 km; all significant at 1%, with 24,000 to 91,000 missions per column." width="1980" height="1010" style="width:100%;height:auto;display:block;border-radius:4px;background:#fff">
+          <p style="margin:.6rem 0 0">Read the first row: whether the trip is under 5 km or over 20 km, finding a patient at home costs roughly <b>4 to 5 extra minutes</b>. It is a fixed cost of locating the patient, not a matter of distance; for urgent missions it is about 5 minutes, +30% on driving time.</p>
+        </div>
+        <p class="so"><b>So what</b>Better caller location (handset location, address validation, dispatcher protocols) is one of the cheapest ways to save minutes.</p>
+      </div>
+    </article>
+
     <article class="proj" id="stroke">
       <aside><span class="label">Hospital networks · rules vs. practice</span><h3>Where do stroke patients go, and where should they go?</h3><div class="cite">Lombardy, 2024 · 12,047 stroke patients transported by the 118 service</div></aside>
       <div class="body">
@@ -265,19 +278,6 @@ table.coef td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-
           <figcaption class="note">An observation is a worker-month; only workers with at least one mission in that month.</figcaption>
         </figure>
         <p class="so"><b>So what</b>Volunteers are a small but resilient share of capacity: when the system was under the greatest stress, their presence did not shrink. Emergency planning should count on them as a stabiliser, not only as extra hands.</p>
-      </div>
-    </article>
-
-    <article class="proj" id="location">
-      <aside><span class="label">Dispatch · caller location</span><h3>The hidden cost of not knowing where the caller is</h3><div class="cite"><i>Italian Economic Journal</i>, 2025 · <a href="https://doi.org/10.1007/s40797-025-00352-3">paper</a></div></aside>
-      <div class="body">
-        <p>Dispatchers often receive imprecise addresses. Comparing the outbound trip (destination uncertain) with the return trip (destination known), on Liguria emergency data, isolates the time lost looking for the patient.</p>
-        <div class="panel">
-          <span class="label">Extra driving time to reach a patient at home, by trip length (minutes)</span>
-          <img src="../img/caller_location_by_distance.png" alt="Table: extra minutes of outward driving when the patient is in a dwelling, by total trip distance. 4.64 minutes under 5 km, 4.66 for 5 to 10 km, 4.75 for 10 to 15 km, 4.02 for 15 to 20 km, 3.60 for 20 to 25 km; all significant at 1%, with 24,000 to 91,000 missions per column." width="1980" height="1010" style="width:100%;height:auto;display:block;border-radius:4px;background:#fff">
-          <p style="margin:.6rem 0 0">Read the first row: whether the trip is under 5 km or over 20 km, finding a patient at home costs roughly <b>4 to 5 extra minutes</b>. It is a fixed cost of locating the patient, not a matter of distance; for urgent missions it is about 5 minutes, +30% on driving time.</p>
-        </div>
-        <p class="so"><b>So what</b>Better caller location (handset location, address validation, dispatcher protocols) is one of the cheapest ways to save minutes.</p>
       </div>
     </article>
 
