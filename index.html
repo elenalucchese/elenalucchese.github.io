@@ -132,11 +132,7 @@ footer{border-top:1px solid var(--line);padding-block:1.5rem;font-size:.85rem;co
     <a class="name" href="#top">Elena Lucchese</a>
     <ul>
       <li><a href="projects.html">Progetti</a></li>
-      <li><a href="#evidence">Risultati</a></li>
       <li><a href="#services">Cosa faccio</a></li>
-      <li><a href="#cases">Casi studio</a></li>
-      <li><a href="#skills">Competenze</a></li>
-      <li><a href="#experience">Esperienza</a></li>
       <li><a href="#contact">Contatti</a></li>
       <li><a href="en/index.html" lang="en" hreflang="en">EN</a></li>
     </ul>
@@ -175,30 +171,6 @@ footer{border-top:1px solid var(--line);padding-block:1.5rem;font-size:.85rem;co
   </div>
 </header>
 
-<section id="evidence">
-  <div class="wrap">
-    <span class="label">Risultati</span>
-    <h2>Cosa ha dimostrato il mio lavoro</h2>
-    <div class="evidence">
-      <div class="fig">
-        <div class="num">+1<small>min</small></div>
-        <p>di tempo medio di risposta dell'ambulanza è associato a circa <b>105 morti in più all'anno</b> per eventi cardiovascolari in una regione italiana.</p>
-        <div class="src">Health Economics, 2024</div>
-      </div>
-      <div class="fig">
-        <div class="num">+30<small>%</small></div>
-        <p>di tempo di viaggio nelle missioni urgenti, circa <b>5 minuti</b>, quando la posizione di chi chiama è incerta.</p>
-        <div class="src">Italian Economic Journal, 2025</div>
-      </div>
-      <div class="fig">
-        <div class="num">24<small>% più lenti</small></div>
-        <p>In pronto soccorso i medici a contratto impiegano almeno il 24% di tempo in più dei medici dipendenti e spendono almeno il 7% in più in esami, <b>senza esiti migliori</b>.</p>
-        <div class="src">Con Battiston e Blanes i Vidal · in revisione</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="services">
   <div class="wrap">
     <span class="label">Cosa faccio</span>
@@ -210,84 +182,6 @@ footer{border-top:1px solid var(--line);padding-block:1.5rem;font-size:.85rem;co
       <li><h3>Costruzione di dati da archivi pubblici</h3><p>Collegamento di grandi archivi amministrativi: missioni, accessi in pronto soccorso, ricoveri, mortalità, dati geografici e meteo.</p></li>
       <li><h3>Evidenze per chi decide</h3><p>Report e sintesi chiare per dirigenti, regioni e decisori pubblici.</p></li>
     </ul>
-  </div>
-</section>
-
-<section id="cases">
-  <div class="wrap">
-    <span class="label">Casi studio</span>
-    <h2>Lavori selezionati, raccontati per chi opera sul campo</h2>
-    <p class="intro">Ogni studio usa un esperimento naturale o una variazione quasi casuale per separare la causa dalla coincidenza. È la differenza tra "i tempi di risposta sono più lunghi dove gli esiti sono peggiori" e "questo ritardo causa queste morti".</p>
-
-    <article class="case">
-      <aside><span class="label">Tempi di risposta</span><h3>Quanto costa un minuto di ritardo dell'ambulanza?</h3><div class="cite"><i>Health Economics</i> 33(4), 2024 · <a href="https://doi.org/10.1002/hec.4791">articolo</a></div></aside>
-      <dl>
-        <dt>Problema</dt><dd>Il tempo di risposta è un KPI centrale per i servizi di emergenza. Quanto conta davvero per i pazienti?</dd>
-        <dt>Dati</dt><dd>Chiamate di emergenza e tempi di risposta delle ambulanze per eventi cardiovascolari in una regione italiana, collegati agli esiti dei pazienti e al meteo.</dd>
-        <dt>Metodo</dt><dd>La pioggia durante la missione rallenta le ambulanze per ragioni che non dipendono dalle condizioni del paziente. La uso come esperimento naturale (variabili strumentali).</dd>
-        <dt>Risultato</dt><dd>Un minuto in più di tempo medio di risposta corrisponde a circa 105 morti in più all'anno nella regione. L'articolo stima anche il valore economico di queste vite.</dd>
-        <dt class="so">Quindi</dt><dd class="so">Ridurre anche solo di un minuto, con il posizionamento dei mezzi, la rapidità dell'invio o i percorsi, ha un ritorno grande e misurabile.</dd>
-      </dl>
-    </article>
-
-    <article class="case">
-      <aside><span class="label">Centrale operativa · localizzazione</span><h3>Il costo nascosto di non sapere dove si trova chi chiama</h3><div class="cite"><i>Italian Economic Journal</i>, 2025 · <a href="https://doi.org/10.1007/s40797-025-00352-3">articolo</a></div></aside>
-      <dl>
-        <dt>Problema</dt><dd>Gli operatori di centrale ricevono spesso indirizzi incompleti o imprecisi. Quanto tempo costa?</dd>
-        <dt>Dati</dt><dd>Archivi amministrativi del sistema di emergenza sanitaria della Liguria.</dd>
-        <dt>Metodo</dt><dd>Confronto tra il viaggio di andata (destinazione incerta) e quello di ritorno (destinazione nota), e tra abitazioni private e luoghi pubblici, con un disegno difference-in-differences.</dd>
-        <dt>Risultato</dt><dd>L'incertezza sulla posizione ritarda le missioni urgenti di circa 5 minuti, circa il 30% del tempo di viaggio. Nelle missioni non urgenti il ritardo è circa la metà.</dd>
-        <dt class="so">Quindi</dt><dd class="so">Localizzare meglio chi chiama (localizzazione automatica del telefono, verifica degli indirizzi, protocolli per gli operatori) è uno dei modi più economici per guadagnare minuti.</dd>
-      </dl>
-    </article>
-
-    <article class="case">
-      <aside><span class="label">Personale · modelli di impiego</span><h3>Dipendenti o medici a contratto in pronto soccorso?</h3><div class="cite">Con D. Battiston e J. Blanes i Vidal · in revisione</div></aside>
-      <dl>
-        <dt>Problema</dt><dd>Gli ospedali ricorrono sempre più a medici a contratto per coprire i turni. Sono produttivi quanto i dipendenti?</dd>
-        <dt>Dati</dt><dd>Archivi amministrativi del pronto soccorso di un grande ospedale pubblico.</dd>
-        <dt>Metodo</dt><dd>I pazienti sono assegnati ai medici in modo quasi casuale, il che permette un confronto equo.</dd>
-        <dt>Risultato</dt><dd>I medici a contratto impiegano almeno il 24% di tempo in più per trattare e dimettere i pazienti e spendono almeno il 7% in più in esami e trattamenti, senza esiti migliori. La differenza dipende dal tipo di contratto, non da chi viene assunto: i dipendenti fanno più straordinari non pagati quando questo aiuta i colleghi dipendenti.</dd>
-        <dt class="so">Quindi</dt><dd class="so">I contratti del personale influenzano il comportamento del gruppo e la produttività, non solo i costi.</dd>
-      </dl>
-    </article>
-
-    <div class="other">
-      <div><h3>Turni e fatica</h3><p>Le prestazioni calano a fine turno. Il confronto tra casi di diversa urgenza mostra che conta la fatica, non lo scarso impegno. Con P. Roberti, working paper.</p></div>
-      <div><h3>Protocolli di centrale: MPDS in Liguria</h3><p>Valutazione dell'effetto dell'introduzione nel 2011 del Medical Priority Dispatch System su ritardi di risposta e durata delle chiamate. <i>Annals of Emergency Dispatch and Response</i>, 2016.</p></div>
-      <div><h3>In corso: emergenza-urgenza in Lombardia</h3><p>Mezzi avanzati e di base, scelta dell'ospedale di destinazione, sovraffollamento del pronto soccorso e produttività ospedaliera, su dati collegati di missioni, accessi, ricoveri e mortalità. Modigliani Research Grant.</p></div>
-    </div>
-    <p style="margin-top:1.5rem">Tutte le pubblicazioni e i working paper: <a href="https://sites.google.com/view/elenalucchese/research">pagina della ricerca</a> · <a href="https://scholar.google.com/citations?user=vDhjWOgAAAAJ">Google Scholar</a></p>
-  </div>
-</section>
-
-<section id="skills">
-  <div class="wrap">
-    <span class="label">Competenze</span>
-    <h2>Metodi, dati e strumenti</h2>
-    <div class="skills">
-      <div><h3>Metodi</h3><ul class="tags"><li class="strong">Inferenza causale</li><li>Variabili strumentali</li><li>Difference-in-differences</li><li>Regression discontinuity</li><li class="strong">Valutazione d'impatto</li><li>Microsimulazione</li><li>Analisi spaziale</li></ul></div>
-      <div><h3>Dati</h3><ul class="tags"><li class="strong">Grandi archivi amministrativi</li><li>Record linkage</li><li>Dati di centrale e missioni</li><li>Dati di pronto soccorso e ospedalieri</li><li>Dati geografici e meteo</li></ul></div>
-      <div><h3>Strumenti</h3><ul class="tags"><li class="strong">Stata</li><li>ArcGIS</li><li>R</li><li>Python</li><li>LaTeX</li><li>Pacchetto Office</li></ul></div>
-      <div><h3>Ambito</h3><ul class="tags"><li class="strong">Centrali operative (118 / 112)</li><li>Allocazione delle ambulanze</li><li>Tempi di risposta</li><li>Organizzazione del pronto soccorso</li><li>Turni e personale</li><li>Politiche pubbliche</li></ul></div>
-    </div>
-  </div>
-</section>
-
-<section id="experience">
-  <div class="wrap">
-    <span class="label">Esperienza</span>
-    <h2>Esperienza e formazione</h2>
-    <ul class="xp">
-      <li><div class="yr">2022–oggi</div><div><b>Consulente indipendente</b> <span>· AREU Lombardia, Ospedale Niguarda (Milano), Regione Liguria</span></div></li>
-      <li><div class="yr">2019–2025</div><div><b>Assegnista di ricerca</b>, Università di Milano-Bicocca <span>· Dip. di Economia, Metodi Quantitativi e Strategie di Impresa</span></div></li>
-      <li><div class="yr">2018–2019</div><div><b>Assegnista di ricerca</b>, Università di Roma Tor Vergata <span>· visiting presso EIEF</span></div></li>
-      <li><div class="yr">2017</div><div><b>Visiting Researcher</b>, Stanford University <span>· Center for Health Policy</span></div></li>
-      <li><div class="yr">2014–2018</div><div><b>Dottorato in Economia</b>, Università di Bologna</div></li>
-      <li><div class="yr">2015</div><div><b>Consulente</b>, Senato della Repubblica <span>· regolamentazione della sharing economy</span>; contributo a un rapporto <b>OCSE</b> sugli archivi amministrativi</div></li>
-      <li><div class="yr">2010–2013</div><div><b>Laurea triennale e magistrale in Economia e Finanza</b>, Università di Padova <span>· 110/110</span></div></li>
-    </ul>
-    <p style="margin-top:1.5rem;color:var(--muted);max-width:62ch">Premi: Modigliani Research Grant (Fondazione UniCredit), Premio Martinotti, Starting Grant Milano-Bicocca, Young Researcher Best Paper Award (Associazione Italiana di Economia Sanitaria), EIEF Grant. Presentazioni a NBER, EEA-ESEM, Royal Economic Society, IAAE.</p>
   </div>
 </section>
 
