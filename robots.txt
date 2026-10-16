@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://elenalucchese.github.io/sitemap.xml
